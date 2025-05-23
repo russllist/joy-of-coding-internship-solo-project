@@ -1,6 +1,7 @@
 import React from 'react';
+import TaskTile from './components/TaskTile';
 
-interface User {
+export interface User {
   id: number;
   name: string;
   email: string;
@@ -19,23 +20,12 @@ const page = async () => {
       <br />
       <p>This is where the list of task tiles will go</p>
       <br />
-      <h1>Placeholder Table fetching data from jsonplaceholder:</h1>
-      <table className="table table-bordered">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user) => (
-            <tr key={user.id}>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h1>Placeholder Cards fetching data from jsonplaceholder:</h1>
+      <div>
+        {users.map((user) => (
+          <TaskTile key={user.id} user={user} />
+        ))}
+      </div>
     </div>
   );
 };
