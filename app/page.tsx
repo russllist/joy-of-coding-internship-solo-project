@@ -12,17 +12,18 @@ const page = async () => {
     next: { revalidate: 10 },
   });
   const users: User[] = await res.json();
+  // client side filtering
+  const filtered: User[] = users.filter(
+    (user) => user.name === 'Leanne Graham'
+  );
 
   return (
     <div>
-      <h1>Task Manager</h1>
-      <p>Track your to-do list</p>
       <br />
-      <p>This is where the list of task tiles will go</p>
-      <br />
-      <h1>Placeholder Cards fetching data from jsonplaceholder:</h1>
+
+      <h1>Placeholder Tiles fetching data from jsonplaceholder:</h1>
       <div>
-        {users.map((user) => (
+        {filtered.map((user) => (
           <TaskTile key={user.id} user={user} />
         ))}
       </div>
