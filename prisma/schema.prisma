@@ -13,3 +13,14 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Replay {
+  id          Int      @id @default(autoincrement())
+  url         String   @db.Text
+  thumbnail   String   @db.Text
+  title       String   @db.Text
+  host        String   @db.VarChar(255)
+  date        DateTime @db.Date
+  duration    DateTime @db.Time
+  description String   @db.Text
+}
