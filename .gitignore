@@ -42,3 +42,5 @@ next-env.d.ts
 app/page-old.tsx
 
 /app/generated/prisma
+
+/app/generated/prisma

@@ -1,12 +1,12 @@
 -- CreateTable
-CREATE TABLE `Replay` (
+CREATE TABLE `replay` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `url` TEXT NOT NULL,
     `thumbnail` TEXT NOT NULL,
     `title` TEXT NOT NULL,
     `host` VARCHAR(255) NOT NULL,
     `date` DATE NOT NULL,
-    `duration` TIME NOT NULL,
+    `duration` TIME(0) NOT NULL,
     `description` TEXT NOT NULL,
 
     PRIMARY KEY (`id`)

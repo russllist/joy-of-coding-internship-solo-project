@@ -23,7 +23,7 @@ const page = async () => {
 
       <h1>Placeholder Tiles fetching data from jsonplaceholder:</h1>
       <div>
-        {filtered.map((user) => (
+        {users.map((user) => (
           <TaskTile key={user.id} user={user} />
         ))}
       </div>
