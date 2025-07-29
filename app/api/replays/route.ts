@@ -17,3 +17,11 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(newReplay, {status:201})
 }
+
+export async function GET(request: NextRequest){
+
+    //get all the things and save them in a constant
+    const replays = await prisma.replay.findMany()
+
+    return NextResponse.json(replays)
+}
