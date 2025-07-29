@@ -7,6 +7,17 @@ export interface User {
   email: string;
 }
 
+export interface Replay {
+  id: number;
+  url: string;
+  thumbnail: string;
+  title: string;
+  host: string;
+  date: Date;
+  duration: Date;
+  description: string;
+}
+
 const page = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users', {
     next: { revalidate: 10 },

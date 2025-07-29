@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Task Manager',
-  description: 'Organize Your To-Do List',
+  title: 'JoC Replays',
+  description: 'Joy of Coding Session Replays',
 };
 
 export default function RootLayout({
