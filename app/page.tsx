@@ -1,6 +1,8 @@
 // 'use client';
 import React from 'react';
 import ReplayTile from './components/ReplayTile';
+import Link from 'next/link';
+import { Button } from '@radix-ui/themes';
 
 export interface Replay {
   id: number;
@@ -52,7 +54,10 @@ const page = async () => {
   return (
     <div>
       <br />
-      <h1>Add Button and Sorting will go here</h1>
+      <h1>Sorting will go here</h1>
+      <Button>
+        <Link href="/newreplay">Add New Replay</Link>
+      </Button>
       <div>
         {replays.map((replay) => (
           <ReplayTile key={replay.id} replay={replay} />

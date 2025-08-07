@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import SidePanel from './SidePanel';
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,10 +30,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex space-x-6">
-          <SidePanel></SidePanel>
-          <main>{children}</main>
-        </div>
+        <Theme>
+          <div className="flex space-x-6">
+            <SidePanel></SidePanel>
+            <main>{children}</main>
+          </div>
+        </Theme>
       </body>
     </html>
   );
